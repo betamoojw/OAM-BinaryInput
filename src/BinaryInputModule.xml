@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Organization/knxprod-support/knx_project_20/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<KNX xmlns="http://knx.org/xml/project/20" xmlns:op="http://github.com/OpenKNX/OpenKNXproducer">
+
+  <op:config href="BinaryInputModule.conf.xml" />
+
+  <op:nowarn id="1" regex="BIN_ReplacesVersions" />
+
+  <op:ETS OpenKnxId="0xAF"
+    ApplicationNumber="0x04"
+    ApplicationVersion="0.1"
+    ReplacesVersions="0.0"
+    ApplicationRevision="0"
+    ProductName="Binäreingänge"
+    ApplicationName="AB-Binary-Logic-Button"
+    BuildSuffix="-dev"
+    BuildSuffixText=" (dev)"
+    OrderNumber="OpenKnxBinaryInput"
+    BaggagesRootDir="A6/01"
+  />
+
+  <op:define prefix="BASE" ModuleType="10"
+            share="../lib/OGM-Common/src/Common.share.xml">
+    <op:verify File="../lib/OGM-Common/library.json" ModuleVersion="%BASE_VerifyVersion%" />
+  </op:define>
+
+  <op:define prefix="UCT"
+    share="../../OFM-ConfigTransfer/src/ConfigTransfer.share.xml"
+    noConfigTransfer="true"
+    ModuleType="99">
+    <op:verify File="../../OFM-ConfigTransfer/library.json" ModuleVersion="%UCT_VerifyVersion%" />
+  </op:define>
+
+  <op:define prefix="BIN"
+    share="BinaryInputModule.share.xml"
+    ModuleType="20">
+    <op:verify File="../library.json" ModuleVersion="%BIN_ApplicationVersion%" />
+  </op:define>
+
+  <op:define prefix="LOG"
+    share="../lib/OFM-LogicModule/src/Logikmodul.share.xml"
+    template="../lib/OFM-LogicModule/src/Logikmodul.templ.xml"
+    NumChannels="3"
+    KoOffset="600"
+    ModuleType="10">
+    <op:verify File="../lib/OFM-LogicModule/library.json" ModuleVersion="%LOG_VerifyVersion%" />
+  </op:define>
+
+    <op:define prefix="BTN"
+    share="../lib/OFM-VirtualButton/src/VirtualButton.share.xml"
+    template="../lib/OFM-VirtualButton/src/VirtualButton.templ.xml"
+    NumChannels="16"
+    KoOffset="90"
+    ModuleType="30">
+    <op:verify File="../lib/OFM-VirtualButton/library.json" ModuleVersion="%BTN_VerifyVersion%" />
+    </op:define>
+
+    <op:define prefix="BI"
+    share="../lib/OFM-BinaryInput/src/BinaryInputChannel.share.xml"
+    template="../lib/OFM-BinaryInput/src/BinaryInputChannel.templ.xml"
+    NumChannels="16"
+    KoOffset="51"
+    ModuleType="40">
+    <op:verify File="../lib/OFM-BinaryInput/library.json" ModuleVersion="%BI_VerifyVersion%" />
+    </op:define>
+
+    <generate />
+</KNX>

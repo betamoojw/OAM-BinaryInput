@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Organization/knxprod-support/knx_project_20/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<KNX xmlns:op="http://github.com/OpenKNX/OpenKNXproducer" xmlns="http://knx.org/xml/project/20" CreatedBy="KNX MT" ToolVersion="5.1.255.16695">
+  <ManufacturerData>
+    <Manufacturer RefId="M-00FA">
+      <ApplicationPrograms>
+        <ApplicationProgram Id="%AID%" ApplicationNumber="200" ApplicationVersion="1" ProgramType="ApplicationProgram" MaskVersion="MV-07B0" Name="BIN" LoadProcedureStyle="MergedProcedure" PeiType="0" DefaultLanguage="de" DynamicTableManagement="false" Linkable="false" MinEtsVersion="4.0">
+          <Static>
+            <ParameterTypes>
+              <ParameterType Id="%AID%_PT-BTNInputs" Name="BTNInputs">
+                <TypeRestriction Base="Value" SizeInBit="16">
+                  <Enumeration Text="Externes KO" Value="0" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang A" Value="51" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang B" Value="52" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang C" Value="53" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang D" Value="54" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang E" Value="55" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang F" Value="56" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang G" Value="57" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang H" Value="58" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang I" Value="59" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang J" Value="60" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang K" Value="61" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang L" Value="62" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang M" Value="63" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang N" Value="64" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang O" Value="65" Id="%ENID%" />
+                  <Enumeration Text="Binäreingang P" Value="66" Id="%ENID%" />
+                </TypeRestriction>
+              </ParameterType>
+            </ParameterTypes>
+            <Parameters>
+            </Parameters>
+            <ParameterRefs>
+            </ParameterRefs>
+            <ComObjectTable>
+            </ComObjectTable>
+            <ComObjectRefs>
+            </ComObjectRefs>
+          </Static>
+          <Dynamic>
+          </Dynamic>
+        </ApplicationProgram>
+      </ApplicationPrograms>
+      <Baggages>
+        <Baggage TargetPath="" Name="Help_de.zip" Id="%FILE-HELP-de%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+        <Baggage TargetPath="" Name="Icons.zip" Id="%FILE-ICONS%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+      </Baggages>
+    </Manufacturer>
+  </ManufacturerData>
+</KNX>
