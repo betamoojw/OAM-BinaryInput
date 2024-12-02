@@ -17,7 +17,7 @@
     #define OPENKNX_BIN_OUT_TCA_SDA 6
     #define OPENKNX_BIN_OUT_TCA_SCL 7
 
-    #define OPENKNX_BI_GPIO_PINS 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14
+    #define OPENKNX_BI_GPIO_PINS 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 14, 15, 16, 17
     #define OPENKNX_BI_GPIO_COUNT 16
     #define OPENKNX_BI_ONLEVEL LOW
 #endif
