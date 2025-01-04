@@ -26,7 +26,7 @@
                 "--BaggagesDir",
                 "src/Baggages/Help_de",
                 "--Prefix",
-                "FIN"
+                "BIN"
             ],
             "problemMatcher": [],
             "group": "test"
@@ -109,7 +109,7 @@
             "type": "shell",
             "command": "scripts/Build-Release.ps1",
             "args": [
-                "ReleaseR503"
+                "Release"
             ],
             "problemMatcher": [],
             "group": "test"

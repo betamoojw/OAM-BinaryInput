@@ -32,6 +32,24 @@
     <op:verify File="../library.json" ModuleVersion="%BIN_ApplicationVersion%" />
   </op:define>
 
+  <op:define prefix="BI"
+    share="../lib/OFM-BinaryInput/src/BinaryInputChannel.share.xml"
+    template="../lib/OFM-BinaryInput/src/BinaryInputChannel.templ.xml"
+    NumChannels="16"
+    KoOffset="51"
+    ModuleType="40">
+    <op:verify File="../lib/OFM-BinaryInput/library.json" ModuleVersion="%BI_VerifyVersion%" />
+  </op:define>
+
+  <op:define prefix="BTN"
+    share="../lib/OFM-VirtualButton/src/VirtualButton.share.xml"
+    template="../lib/OFM-VirtualButton/src/VirtualButton.templ.xml"
+    NumChannels="16"
+    KoOffset="90"
+    ModuleType="30">
+    <op:verify File="../lib/OFM-VirtualButton/library.json" ModuleVersion="%BTN_VerifyVersion%" />
+  </op:define>
+
   <op:define prefix="LOG"
     share="../lib/OFM-LogicModule/src/Logikmodul.share.xml"
     template="../lib/OFM-LogicModule/src/Logikmodul.templ.xml"
@@ -41,23 +59,5 @@
     <op:verify File="../lib/OFM-LogicModule/library.json" ModuleVersion="%LOG_VerifyVersion%" />
   </op:define>
 
-    <op:define prefix="BTN"
-    share="../lib/OFM-VirtualButton/src/VirtualButton.share.xml"
-    template="../lib/OFM-VirtualButton/src/VirtualButton.templ.xml"
-    NumChannels="16"
-    KoOffset="90"
-    ModuleType="30">
-    <op:verify File="../lib/OFM-VirtualButton/library.json" ModuleVersion="%BTN_VerifyVersion%" />
-    </op:define>
-
-    <op:define prefix="BI"
-    share="../lib/OFM-BinaryInput/src/BinaryInputChannel.share.xml"
-    template="../lib/OFM-BinaryInput/src/BinaryInputChannel.templ.xml"
-    NumChannels="16"
-    KoOffset="51"
-    ModuleType="40">
-    <op:verify File="../lib/OFM-BinaryInput/library.json" ModuleVersion="%BI_VerifyVersion%" />
-    </op:define>
-
-    <generate />
+  <generate />
 </KNX>

@@ -4,7 +4,7 @@
 
   <op:config name="%LOG_NumChannelsDefault%" value="3" />
   <op:config name="%BTN_NumChannelsDefault%" value="3" />
-  <op:config name="%BI_NumChannelsDefault%" value="3" />
+  <op:config name="%BI_NumChannelsDefault%" value="16" />
 
   <op:config name="%BTN_VerifyVersion%" value="0.5" />
   <op:config name="%BI_VerifyVersion%" value="0.2" />

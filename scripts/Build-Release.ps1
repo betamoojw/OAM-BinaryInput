@@ -29,7 +29,7 @@
 if (!$?) { exit 1 }
 
 # build firmware for R503
-lib/OGM-Common/scripts/setup/reusable/Build-Step.ps1 release_R503 firmware-fingerprint uf2
+lib/OGM-Common/scripts/setup/reusable/Build-Step.ps1 release_AB_SMARTHOUSE_BI_REG6_16CH firmware-ABSmartHouse-BinaryInput uf2
 if (!$?) { exit 1 }
 
 # execute generic post-build steps

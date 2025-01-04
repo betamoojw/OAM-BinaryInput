@@ -6,7 +6,7 @@
 
 void setup()
 {
-    const uint8_t firmwareRevision = 13;
+    const uint8_t firmwareRevision = 0;
     openknx.init(firmwareRevision);
     openknx.addModule(1, openknxLogic);
     openknx.addModule(2, openknxBinaryInputModule);
@@ -15,14 +15,14 @@ void setup()
     openknx.addModule(9, openknxFileTransferModule);
     openknx.setup();
 
-    openknxGpioBinaryInputModule.setup();
-    openknxBinaryInputModule.setup();
+    //openknxGpioBinaryInputModule.setup();
+    //openknxBinaryInputModule.setup();
 }
 
 void loop()
 {
     openknx.loop();
 
-    openknxGpioBinaryInputModule.loop();
-    openknxBinaryInputModule.loop();
+    //openknxGpioBinaryInputModule.loop();
+    //openknxBinaryInputModule.loop();
 }
