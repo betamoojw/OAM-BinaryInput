@@ -4,12 +4,12 @@
 
   <op:config name="%LOG_NumChannelsDefault%" value="3" />
   <op:config name="%BTN_NumChannelsDefault%" value="3" />
-  <op:config name="%BI_NumChannelsDefault%" value="2" />
+  <op:config name="%BI_NumChannelsDefault%" value="3" />
 
   <op:config name="%BTN_VerifyVersion%" value="0.5" />
   <op:config name="%BI_VerifyVersion%" value="0.2" />
   <op:config name="%UCT_VerifyVersion%" value="0.2" />
-  <op:config name="%LOG_VerifyVersion%" value="3.3" />
+  <op:config name="%LOG_VerifyVersion%" value="3.5" />
   <op:config name="%BASE_VerifyVersion%" value="1.2" />
 
   <op:config name="%BIN_ApplicationVersion%" value="0.1" />

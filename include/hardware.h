@@ -1,6 +1,10 @@
 #include <OpenKNXHardware.h>
 
 #ifdef BOARD_AB_SMARTHOUSE_BI_REG6_8CH
+    #define DEVICE_ID "AB-BIN-16CH"
+    #define HARDWARE_NAME "AB-BIN-16CH"
+    #define DEVICE_NAME "AB-SmartHouse Binary Input 16x, 6 TE"
+
     #define INFO_LED_PIN 11
     #define INFO_LED_PIN_ACTIVE_ON HIGH
     #define PROG_LED_PIN 10

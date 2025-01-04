@@ -7,7 +7,7 @@
   <op:nowarn id="1" regex="BIN_ReplacesVersions" />
 
   <op:ETS OpenKnxId="0xAF"
-    ApplicationNumber="0x04"
+    ApplicationNumber="0x05"
     ApplicationVersion="0.1"
     ReplacesVersions="0.0"
     ApplicationRevision="0"
@@ -16,7 +16,7 @@
     BuildSuffix="-dev"
     BuildSuffixText=" (dev)"
     OrderNumber="OpenKnxBinaryInput"
-    BaggagesRootDir="A6/01"
+    BaggagesRootDir="A6/05"
   />
 
   <op:define prefix="BASE" ModuleType="10"
