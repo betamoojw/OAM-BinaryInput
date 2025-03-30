@@ -1,12 +1,17 @@
 #pragma once
 
-#define MAIN_Version "0487853"
+#define MAIN_Version "ede1d2f"
 #define KNX_Version "2.1.2+764900e"
-#define MODULE_Common_Version "1.2.0+6f467fb"
+#define MODULE_Common_Version "1.2.0+9f24e6e"
 #define MODULE_Common_Version_Major 1
 #define MODULE_Common_Version_Minor 2
 #define MODULE_Common_Version_Revision 0
 #define MODULE_Common_ETS 18
+#define MODULE_GPIOModule_Version "0.0.0+b95bb8c"
+#define MODULE_GPIOModule_Version_Major 0
+#define MODULE_GPIOModule_Version_Minor 0
+#define MODULE_GPIOModule_Version_Revision 0
+#define MODULE_GPIOModule_ETS 0
 #define MODULE_LogicModule_Version "3.5.2+9a1cfe1"
 #define MODULE_LogicModule_Version_Major 3
 #define MODULE_LogicModule_Version_Minor 5

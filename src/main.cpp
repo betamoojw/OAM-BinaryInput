@@ -3,6 +3,7 @@
 #include "GpioBinaryInputModule.h"
 #include "VirtualButtonModule.h"
 #include "FileTransferModule.h"
+#include "GPIOModule.h"
 
 void setup()
 {
@@ -12,17 +13,13 @@ void setup()
     openknx.addModule(2, openknxBinaryInputModule);
     openknx.addModule(3, openknxVirtualButtonModule);
     openknx.addModule(5, openknxGpioBinaryInputModule);
+    openknx.addModule(6, openknxGPIOModule);
     openknx.addModule(9, openknxFileTransferModule);
     openknx.setup();
 
-    //openknxGpioBinaryInputModule.setup();
-    //openknxBinaryInputModule.setup();
 }
 
 void loop()
 {
     openknx.loop();
-
-    //openknxGpioBinaryInputModule.loop();
-    //openknxBinaryInputModule.loop();
 }

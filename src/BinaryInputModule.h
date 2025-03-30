@@ -1,10 +1,7 @@
 #pragma once
 #include "OpenKNX.h"
 #include "hardware.h"
-
-#ifdef OPENKNX_BIN_OUT_TCA_WIRE
-  #include "TCA9555.h"
-#endif
+#include "GPIOModule.h"
 
 #define INIT_RESET_TIMEOUT 1000
 #define LED_RESET_TIMEOUT 1000
@@ -26,11 +23,8 @@ class BinaryInputModule : public OpenKNX::Module
 
     uint32_t debugOutTimer = 0;
 
-    const uint8_t _gpioPins[OPENKNX_BI_GPIO_COUNT] = {OPENKNX_BI_GPIO_PINS};
-
-#ifdef OPENKNX_BIN_OUT_TCA_WIRE
-    TCA9555 tca = TCA9555(OPENKNX_BIN_OUT_TCA_ADDR, &OPENKNX_BIN_OUT_TCA_WIRE);
-#endif
+    const uint16_t _gpioPins[OPENKNX_BI_GPIO_COUNT] = {OPENKNX_BI_GPIO_PINS};
+    const uint16_t _statusPins[OPENKNX_BI_GPIO_COUNT] = {OPENKNX_BI_STATUS_PINS};
 };
 
 extern BinaryInputModule openknxBinaryInputModule;
