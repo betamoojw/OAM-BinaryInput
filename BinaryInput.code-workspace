@@ -22,7 +22,7 @@
 			"path": "../OFM-FileTransferModule"
 		},
 		{
-			"path": "../OFM-GPIOModule"
+			"path": "../OFM-Meter"
 		},
 		{
 			"path": "../knx"

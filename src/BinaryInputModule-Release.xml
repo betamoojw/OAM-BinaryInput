@@ -4,13 +4,15 @@
 
   <op:config href="BinaryInputModule.conf.xml" />
 
-  <op:ETS OpenKnxId="0xA6"
+  <op:ETS
+    OpenKnxId="0xA6"
     ApplicationNumber="0x05"
     ApplicationVersion="%BIN_ApplicationVersion%"
     ReplacesVersions="%BIN_ReplacesVersions%"
     ApplicationRevision="0"
     ProductName="Binäreingänge"
     ApplicationName="AB-Binary-Logic-Button"
+    BusCurrent="10"
     OrderNumber="OpenKnxBinaryInput"
   />
 
@@ -39,7 +41,7 @@
     KoOffset="51"
     ModuleType="40">
     <op:verify File="../lib/OFM-BinaryInput/library.json" ModuleVersion="%BI_VerifyVersion%" />
-  </op:define>
+  </op:define> <!-- 1 KO/Ch = 16 -->
 
   <op:define prefix="BTN"
     share="../lib/OFM-VirtualButton/src/VirtualButton.share.xml"
@@ -48,7 +50,25 @@
     KoOffset="90"
     ModuleType="30">
     <op:verify File="../lib/OFM-VirtualButton/library.json" ModuleVersion="%BTN_VerifyVersion%" />
-  </op:define>
+  </op:define> <!-- 12 KOs/Ch = 192 -->
+
+  <op:define prefix="MTR"
+    share="../lib/OFM-Meter/src/MeterModule.share.xml"
+    template="../lib/OFM-Meter/src/MeterModule.templ.xml"
+    NumChannels="16"
+    KoOffset="285"
+    ModuleType="50">
+    <op:verify File="../lib/OFM-Meter/library.json" ModuleVersion="%MTR_VerifyVersion%" />
+  </op:define> <!-- 4 KOs/Ch = 64 -->
+
+  <op:define prefix="FCB"
+    share="../lib/OFM-FunctionBlocks/src/FunctionBlocks.share.xml"
+    template="../lib/OFM-FunctionBlocks/src/FunctionBlocks.templ.xml"
+    NumChannels="25"
+    KoOffset="350"
+    ModuleType="60">
+    <op:verify File="../lib/OFM-FunctionBlocks/library.json" ModuleVersion="%FCB_VerifyVersion%" /> 
+  </op:define> <!-- 10 KOs/Ch = 250 -->
 
   <op:define prefix="LOG"
     share="../lib/OFM-LogicModule/src/Logikmodul.share.xml"
@@ -57,7 +77,7 @@
     KoOffset="600"
     ModuleType="10">
     <op:verify File="../lib/OFM-LogicModule/library.json" ModuleVersion="%LOG_VerifyVersion%" />
-  </op:define>
+  </op:define> <!-- 3 KOs/Ch = 297 -->
 
   <generate />
 </KNX>

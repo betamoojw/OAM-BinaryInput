@@ -17,8 +17,8 @@ void BinaryInputModule::setup()
 
     for (uint8_t i = 0; i < OPENKNX_BI_GPIO_COUNT; i++)
     {
-        openknxGPIOModule.pinMode(_gpioPins[i], INPUT);
-        openknxGPIOModule.pinMode(_statusPins[i], OUTPUT, true, LOW);
+        openknx.gpio.pinMode(_gpioPins[i], INPUT);
+        openknx.gpio.pinMode(_statusPins[i], OUTPUT, true, LOW);
     }
 
     logInfoP("BinaryInput module ready.");
@@ -30,8 +30,8 @@ void BinaryInputModule::loop()
     bool debugOutput = delayCheck(debugOutTimer, 1000);
 
     for (uint8_t i = 0; i < OPENKNX_BI_GPIO_COUNT; i++) {
-        bool inputActive = openknxGPIOModule.digitalRead(_gpioPins[i]) == OPENKNX_BI_ONLEVEL;
-        openknxGPIOModule.digitalWrite(_statusPins[i], inputActive);
+        bool inputActive = openknx.gpio.digitalRead(_gpioPins[i]) == OPENKNX_BI_ONLEVEL;
+        openknx.gpio.digitalWrite(_statusPins[i], inputActive);
 
         if (debugOutput)
             logDebugP("IN %u (%u): %u", i, _gpioPins[i], inputActive);

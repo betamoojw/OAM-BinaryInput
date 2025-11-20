@@ -1,7 +1,6 @@
 #pragma once
 #include "OpenKNX.h"
 #include "hardware.h"
-#include "GPIOModule.h"
 
 #define INIT_RESET_TIMEOUT 1000
 #define LED_RESET_TIMEOUT 1000
