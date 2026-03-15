@@ -17,7 +17,7 @@ void BinaryInputModule::setup(bool configured)
 
     for (uint8_t i = 0; i < OPENKNX_BI_GPIO_COUNT; i++)
     {
-        openknx.gpio.pinMode(_gpioPins[i], INPUT);
+        openknx.gpio.pinMode(_gpioPins[i], INPUT_PULLUP);
         openknx.gpio.pinMode(_statusPins[i], OUTPUT, true, LOW);
     }
 

@@ -18,7 +18,6 @@ void setup()
     openknx.addModule(8, openknxFunctionBlocksModule);
     openknx.addModule(9, openknxFileTransferModule);
     openknx.setup();
-
 }
 
 void loop()
