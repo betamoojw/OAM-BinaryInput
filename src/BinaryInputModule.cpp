@@ -10,7 +10,7 @@ const std::string BinaryInputModule::version()
     return MAIN_Version;
 }
 
-void BinaryInputModule::setup()
+void BinaryInputModule::setup(bool configured)
 {
     logInfoP("Setup binary input module");
     logIndentUp();
@@ -25,7 +25,7 @@ void BinaryInputModule::setup()
     logIndentDown();
 }
 
-void BinaryInputModule::loop()
+void BinaryInputModule::loop(bool configured)
 {
     bool debugOutput = delayCheck(debugOutTimer, 1000);
 
@@ -41,16 +41,6 @@ void BinaryInputModule::loop()
         debugOutTimer = delayTimerInit();
         logDebugP("");
     }
-}
-
-void BinaryInputModule::processInputKo(GroupObject& ko)
-{
-    uint16_t asap = ko.asap();
-
-    uint8_t channel = BI_KoCalcChannel(asap);
-    if (channel == -1)
-        return;
-
 }
 
 BinaryInputModule openknxBinaryInputModule;

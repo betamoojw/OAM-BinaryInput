@@ -8,14 +8,11 @@
 class BinaryInputModule : public OpenKNX::Module
 {
   public:
-    void loop() override;
-    void setup() override;
+    void setup(bool configured) override;
+    void loop(bool configured) override;
 
     const std::string name() override;
     const std::string version() override;
-
-    void processInputKo(GroupObject &ko) override;
-    //bool processCommand(const std::string cmd, bool diagnoseKo);
 
   private:
     //void runTestMode();
