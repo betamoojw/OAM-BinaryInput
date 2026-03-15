@@ -9,8 +9,8 @@
   <op:ETS
     OpenKnxId="0xAF"
     ApplicationNumber="0x05"
-    ApplicationVersion="0.2"
-    ReplacesVersions="0.1 0.0"
+    ApplicationVersion="0.3"
+    ReplacesVersions="0.2 0.1 0.0"
     ApplicationRevision="0"
     ProductName="Binäreingänge"
     ApplicationName="AB-Binary-Logic-Button"

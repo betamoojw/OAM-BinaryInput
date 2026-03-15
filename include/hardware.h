@@ -1,5 +1,3 @@
-#include <OpenKNXHardware.h>
-
 #ifdef BOARD_AB_SMARTHOUSE_BI_REG6_16CH
     #define DEVICE_ID "AB-BIN-16CH"
     #define HARDWARE_NAME "AB-BIN-16CH"
